@@ -1,0 +1,27 @@
+.header {
+    .main {
+        .main-navigation {
+            width: auto;
+            margin: 0 !important;
+            float: right;
+            ul#primary-menu {
+                display: table;
+                width: 100%;
+                float: none;
+                margin: 6px 0;
+                li {
+                    display: table-cell;
+                    a {
+                        color: #FFF;
+                        margin: 0 10px;
+                        padding: 6px 20px;
+                        &:hover {
+                            color: #FFF;
+                            background: #0767b3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.header {
+    border-bottom: 1px solid #1a1a1a;
+    .topbar {
+        position: relative;
+        background: $d-grey00;
+        @media(max-width: 768px) {
+            padding-bottom: 40px;
+        }
+        .info {
+            @media(max-width: 768px) {
+                display: none;
+            }
+            a {
+                display: inline-block;
+                margin: 0 6px 0 0;
+                color: $white;
+                font-size: 12px;
+                line-height: 40px;
+                i {
+                    margin-right: 6px;
+                    color: $blue00;
+                    font-size: 14px;
+                }
+            }
+        }
+        .search {
+            @media(max-width: 768px) {
+                position: absolute;
+                bottom: 8px;
+            }
+            .input-group {
+                position: relative;
+                overflow: hidden;
+                margin-top: 6px;
+                .form-control {
+                    height: 26px;
+                    padding: 3px 12px;
+                    border-color: #333;
+                    background: #333;
+                    -webkit-border-radius: 0;
+                    -moz-border-radius: 0;
+                    border-radius: 0;
+                    color: $white;
+                    font-size: 12px;
+                }
+                .btn {
+                    padding: 4px 12px 3px;
+                    border-color: $black;
+                    background: $black;
+                    -webkit-border-radius: 0;
+                    -moz-border-radius: 0;
+                    border-radius: 0;
+                    color: $white;
+                    font-size: 12px;
+                    outline: transparent;
+                }
+            }
+        }
+        .myspace {
+            ul{
+                margin: 0;
+                float: right;
+                @media(max-width: 768px) {
+                    float: none;
+                    width: 100%;
+                    border-bottom: 1px solid $black;
+                }
+                li {
+                    float: left;
+                    border-right: 1px solid $black;
+                    text-align: center;
+                    &:first-child {
+                        border-left: 1px solid $black;
+                        @media(max-width: 768px) {
+                            border-left: none;
+                        }
+                    }
+                    &:last-child {
+                        @media(max-width: 768px) {
+                            border-right: none;
+                        }
+                    }
+                    @media(max-width: 768px) {
+                        width: 33.33%;
+                    }
+                    a {
+                        display: inline-block;
+                        width: 40px;
+                        color: $white;
+                        text-align: center;
+                        @media(max-width: 768px) {
+                            display: block;
+                            width: 100%;
+                        }
+                        &.wish-btn:hover {
+                            color: $red;
+                        }
+                        &.cart-btn:hover {
+                            color: $blue00;
+                        }
+                        &.user-btn:hover {
+                            color: #cce4a8;
+                        }
+                        i {
+                            position: relative;
+                            font-size: 16px;
+                            line-height: 40px;
+                            .detail {
+                                position: absolute;
+                                display: inline-block;
+                                top: 2px;
+                                right: -6px;
+                                padding: 4px;
+                                background: $red;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                border-radius: 50%;
+                                color: $white;
+                                font-size: 8px;
+                                line-height: 8px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

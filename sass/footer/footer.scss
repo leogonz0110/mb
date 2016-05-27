@@ -1,0 +1,93 @@
+.footer {
+    background: #242b33;
+    .sitemap {
+        padding: 30px 0;
+    }
+    .title {
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #00fffd;
+            margin-bottom: 20px;
+        }
+    }
+    .company {
+        .logo {
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+        p {
+            color: $white;
+        }
+        .details {
+            padding-left: 20px;
+            .info {
+                margin-bottom: 6px;
+                a {
+                    color: $white;
+                    i {
+                        color: $blue00;
+                    }
+                }
+            }
+        }
+    }
+    .linkList {
+        .link {
+            position: relative;
+            margin-bottom: 6px;
+            padding-left: 15px;
+            i {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: #7b89a4;
+                font-size: 10px;
+                line-height: 20px;
+            }
+            a {
+                color: #7b89a4;
+                line-height: 20px;
+                &:hover {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        background: #000;
+        .copyright {
+            margin-bottom: 0;
+            color: $white;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        .socialLinks {
+            float: right;
+            margin-bottom: 0;
+            .link {
+                float: left;
+                width: 30px;
+                a {
+                    display: block;
+                    color: $white;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                    &.fb-link:hover {
+                        color: #3B5998;
+                    }
+                    &.tw-link:hover {
+                        color: #55ACEE;
+                    }
+                }
+            }
+        }
+    }
+}

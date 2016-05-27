@@ -1,0 +1,26 @@
+.global-nav {
+    width: 75%;
+    float: right;
+    #nav-main {
+        ul.sf-menu {
+            display: table;
+            width: 100%;
+            float: none;
+            margin: 6px 0;
+            li {
+                display: table-cell;
+                float: none;
+            }
+            a {
+                color: #FFF;
+                padding: 10px 15px;
+                margin: 0 10px;
+                &:hover {
+                    color: #FFF;
+                    background: #0767b3;
+                }
+            }
+        }
+
+    }
+}
