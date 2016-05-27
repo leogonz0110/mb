@@ -24,9 +24,9 @@ if ( empty( $woocommerce_loop['columns'] ) )
 	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
 
 if ($woocommerce_loop['columns'] == '3'){
-	$itemsize = 'col-md-3 col-sm-4 col-xs-6';
+	$itemsize = 'col-md-3 col-sm-4';
 } else {
-	$itemsize = 'col-md-3 col-sm-4 col-xs-6';
+	$itemsize = 'col-md-3 col-sm-4';
 }
 
 // Ensure visibility
@@ -75,7 +75,7 @@ $classes[] = 'clearfix';
 				?>
 			</a>
 
-			<?php if ( apply_filters( 'kadence_product_archive_excerpt', true ) ) : ?>
+			<?php if ( apply_filters( 'kadence_product_archive_excerpt', false ) ) : ?>
 					<div class="product_excerpt">
 						<?php
 						if ($post->post_excerpt){

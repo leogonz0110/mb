@@ -220,6 +220,80 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: "Roboto Condensed", "Roboto Condensed", sans-serif; }
+
+.title01 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  border-bottom: 1px solid #9aa6b6;
+  color: #7d8ca3;
+  font-size: 18px;
+  text-transform: uppercase; }
+  .title01:after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: #2aabe2; }
+
+p {
+  margin-bottom: 1.5em; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  margin: 0 1.5em; }
+
+address {
+  margin: 0 0 1.5em; }
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 0.9375px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 0.9375px;
+  font-size: 0.9375rem; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 125%; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -372,7 +446,8 @@ table {
               -moz-border-radius: 50%;
               border-radius: 50%;
               color: #FFF;
-              font-size: 8px;
+              font-family: "Roboto Condensed", sans-serif;
+              font-size: 12px;
               line-height: 8px;
               text-align: center; }
 
@@ -397,48 +472,71 @@ table {
     @media (max-width: 768px) {
       .header .main .logo {
         margin-left: 10px; } }
-  .header .main .mobile-btn {
-    position: absolute;
-    display: none;
-    top: 0;
-    right: 0;
-    width: 40px;
-    border-left: 1px solid #FFF;
-    color: #FFF;
-    font-size: 20px;
-    line-height: 44px;
-    text-align: center; }
-    @media (max-width: 768px) {
-      .header .main .mobile-btn {
-        display: block; } }
 
 /*--------------------------------------------------------------
 # Global Navigation
 --------------------------------------------------------------*/
+.header .mobile-btn {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 40px;
+  border-left: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 43px;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .header .mobile-btn {
+      display: block; } }
 .header .main .main-navigation {
   width: auto;
-  margin: 0 !important;
+  margin-top: 6px;
   float: right; }
+  @media (max-width: 768px) {
+    .header .main .main-navigation {
+      display: none;
+      float: none; }
+      .header .main .main-navigation.expanded {
+        display: block;
+        height: auto; } }
   .header .main .main-navigation ul#primary-menu {
     display: table;
     width: 100%;
     float: none;
     margin: 6px 0; }
+    @media (max-width: 768px) {
+      .header .main .main-navigation ul#primary-menu {
+        display: block; } }
     .header .main .main-navigation ul#primary-menu li {
       display: table-cell; }
+      @media (max-width: 768px) {
+        .header .main .main-navigation ul#primary-menu li {
+          display: block; } }
       .header .main .main-navigation ul#primary-menu li a {
         color: #FFF;
         margin: 0 10px;
-        padding: 6px 20px; }
+        padding: 6px 20px;
+        font-size: 1.4px;
+        font-size: 1.4rem; }
         .header .main .main-navigation ul#primary-menu li a:hover {
+          background: #0767b3;
           color: #FFF;
-          background: #0767b3; }
+          text-decoration: none; }
+        @media (max-width: 768px) {
+          .header .main .main-navigation ul#primary-menu li a {
+            display: block;
+            margin: 0; } }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background: #242b33; }
+  background: #242b33;
+  font-size: 1.4px;
+  font-size: 1.4rem; }
   .footer .sitemap {
     padding: 30px 0; }
   .footer .title {
@@ -509,106 +607,14 @@ table {
 /*--------------------------------------------------------------
 # Products
 --------------------------------------------------------------*/
-/*
-Theme Name: Virtue Child
-Description: Child theme for Virtue
-Author: Leonard Gonzales
-Template: virtue
-*/
-.container {
-  width: 85%;
-  margin: 0 auto;
-  padding: 0 10px; }
-
-.row {
-  margin: 0 -10px; }
-
-/*
- *    Top Header
- */
-.top-header-block {
-  background: #222b31;
-  padding: 6px 0; }
-
-.top-header-block .top-col01,
-.top-header-block .top-col03 {
-  float: left;
-  width: 30%; }
-
-.top-header-block .top-col02 {
-  float: left;
-  width: 40%; }
-
-.top-header-block .top-widget,
-.top-header-block .widget {
-  margin: 0; }
-
-/*
- *    Header
- */
-.header-block {
-  padding: 5px 0;
-  background: #279ed6;
-  background: -moz-linear-gradient(top, #279ed6 0%, #0d7ab9 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #279ed6), color-stop(100%, #0d7ab9));
-  background: -webkit-linear-gradient(top, #279ed6 0%, #0d7ab9 100%);
-  background: -o-linear-gradient(top, #279ed6 0%, #0d7ab9 100%);
-  background: -ms-linear-gradient(top, #279ed6 0%, #0d7ab9 100%);
-  background: linear-gradient(to bottom, #279ed6 0%, #0d7ab9 100%); }
-
-.header-block .logo {
-  width: 17%;
-  float: left;
-  padding: 0 3% 0 0; }
-
-.header-block .logo a {
-  color: #FFF; }
-
-.header-block .global-nav {
-  float: right;
-  width: 80%; }
-
-/*
- *    Main Navigation.
- */
-/*
- *    Footer
- */
-.footer-block {
-  background: #222b31; }
-
-.footer-block .footercol1, .footer-block .footercol2, .footer-block .footercol3, .footer-block .footercol4 {
-  float: left; }
-
-.footer-block .footercol1 {
-  width: 17%; }
-
-.footer-block .footercol2, .footer-block .footercol3, .footer-block .footercol4 {
-  width: 27.66%; }
-
-.footer-block .widget, .footer-block .footer-widget {
-  margin: 0;
-  padding: 0 20px 0 0; }
-
-#containerfooter .menu li {
-  margin: 0 0 6px; }
-
-#containerfooter .menu li a {
-  background: none;
-  color: #FFF;
-  display: inline; }
-
-#containerfooter .menu li a:hover {
-  color: #FFF;
-  background: none; }
-
-.products div.product {
-  border-color: #d2d2d2; }
-
 .grid_item,
 .products ul {
   margin-bottom: 0; }
 
+.products > li {
+  margin-bottom: 20px; }
+  .products > li a:hover {
+    text-decoration: none; }
 .products .product_item {
   border: 1px solid #d2d2d2; }
   .products .product_item:hover {
@@ -617,14 +623,23 @@ Template: virtue
     padding: 10px; }
     .products .product_item .product_img_link .product_img img {
       width: 100% !important; }
-  .products .product_item .product_item_link h5 {
-    padding-top: 0; }
-  .products .product_item .price .amount {
-    color: #de474e;
-    font-weight: bold; }
+  .products .product_item .product_item_link h3 {
+    margin: 0 0 6px;
+    color: #9ba8b9;
+    font-size: 16px;
+    text-align: center; }
+  .products .product_item .price {
+    display: block;
+    text-align: center;
+    margin: 0 0 6px; }
+    .products .product_item .price .amount {
+      color: #de474e;
+      font-size: 14px;
+      font-weight: bold; }
   .products .product_item .item-action {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 0;
     border-top: 1px solid #d2d2d2; }
     .products .product_item .item-action .action {
       width: 50%;
@@ -650,84 +665,79 @@ Template: virtue
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
+.header .mobile-btn {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 40px;
+  border-left: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 43px;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .header .mobile-btn {
+      display: block; } }
+.header .main .main-navigation {
+  width: auto;
+  margin-top: 6px;
+  float: right; }
+  @media (max-width: 768px) {
+    .header .main .main-navigation {
+      display: none;
+      float: none; }
+      .header .main .main-navigation.expanded {
+        display: block;
+        height: auto; } }
+  .header .main .main-navigation ul#primary-menu {
+    display: table;
+    width: 100%;
+    float: none;
+    margin: 6px 0; }
+    @media (max-width: 768px) {
+      .header .main .main-navigation ul#primary-menu {
+        display: block; } }
+    .header .main .main-navigation ul#primary-menu li {
+      display: table-cell; }
+      @media (max-width: 768px) {
+        .header .main .main-navigation ul#primary-menu li {
+          display: block; } }
+      .header .main .main-navigation ul#primary-menu li a {
+        color: #FFF;
+        margin: 0 10px;
+        padding: 6px 20px;
+        font-size: 1.4px;
+        font-size: 1.4rem; }
+        .header .main .main-navigation ul#primary-menu li a:hover {
+          background: #0767b3;
+          color: #FFF;
+          text-decoration: none; }
+        @media (max-width: 768px) {
+          .header .main .main-navigation ul#primary-menu li a {
+            display: block;
+            margin: 0; } }
 
 /*--------------------------------------------------------------
-## Menus
+# Navigation
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-
-  .main-navigation ul {
-    display: block; } }
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
+#wrapper {
   overflow: hidden; }
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+
+.site-content {
+  padding: 20px 0 60px; }
+
+.home .content {
+  padding: 20px 0 60px; }
+.home .special-banner {
+  margin-bottom: 20px; }
+  .home .special-banner .container img {
+    width: 100%; }
+.home .product_display {
+  padding: 20px 0 0;
+  border-top: 1px solid #e7e7e7;
+  background: #f6f6f6; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -746,7 +756,7 @@ a {
     clip: auto !important;
     color: #21759b;
     display: block;
-    font-size: 14px;
+    font-size: 0.875px;
     font-size: 0.875rem;
     font-weight: bold;
     height: auto;

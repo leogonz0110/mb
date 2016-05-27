@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="row">
-		<div class="col-md-5 product-img-case">
+		<div class="col-sm-4 product-img-case">
 
 	<?php
 		/**

@@ -19,20 +19,5 @@
                 margin-left: 10px;
             }
         }
-        .mobile-btn {
-            position: absolute;
-            display: none;
-            top: 0;
-            right: 0;
-            width: 40px;
-            border-left: 1px solid $white;
-            color: $white;
-            font-size: 20px;
-            line-height: 44px;
-            text-align: center;
-            @media(max-width: 768px) {
-                display: block;
-            }
-        }
     }
 }

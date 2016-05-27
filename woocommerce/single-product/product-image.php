@@ -29,13 +29,13 @@ if(isset($virtue['product_simg_resize']) && $virtue['product_simg_resize'] == 0)
 			$image_link  		= wp_get_attachment_url( get_post_thumbnail_id() );
 			if($presizeimage == 1){
 					$image_id = get_post_thumbnail_id( $post->ID );
-					$product_image = wp_get_attachment_image_src( $image_id, 'full' ); 
-					$product_image_url = $product_image[0]; 
+					$product_image = wp_get_attachment_image_src( $image_id, 'full' );
+					$product_image_url = $product_image[0];
 					// Get the cropped size
-					$image_url = aq_resize($product_image_url, $productimgwidth, $productimgheight, true);
-					if(empty($image_url)) {$image_url = $product_image_url;} 
+					$image_url = $product_image_url;
+					if(empty($image_url)) {$image_url = $product_image_url;}
 					// Get srcset
-			        $img_srcset_output = kt_get_srcset_output( $productimgwidth, $productimgheight, $product_image_url, $image_id); 
+			        $img_srcset_output = $product_image_url;
 
 					$image = '<img width="'.esc_attr($productimgwidth).'" height="'.esc_attr($productimgheight).'" src="'.esc_url($image_url).'" '.$img_srcset_output.' class="attachment-shop_single wp-post-image" alt="'.esc_attr( get_the_title( get_post_thumbnail_id() ) ).'">';
 			} else {

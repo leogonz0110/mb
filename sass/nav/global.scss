@@ -1,23 +1,59 @@
 .header {
+    .mobile-btn {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40px;
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+        color: $white;
+        font-size: 20px;
+        line-height: 43px;
+        text-align: center;
+        @media(max-width: 768px) {
+            display: block;
+        }
+    }
     .main {
         .main-navigation {
             width: auto;
-            margin: 0 !important;
+            margin-top: 6px;
             float: right;
+            @media (max-width: 768px) {
+                display: none;
+                float: none;
+                &.expanded {
+                    display: block;
+                    height: auto;
+                }
+            }
             ul#primary-menu {
                 display: table;
                 width: 100%;
                 float: none;
                 margin: 6px 0;
+                @media (max-width: 768px) {
+                    display: block;
+                }
                 li {
                     display: table-cell;
+                    @media (max-width: 768px) {
+                        display: block;
+                    }
                     a {
                         color: #FFF;
                         margin: 0 10px;
                         padding: 6px 20px;
+                        @include font-size(1.4);
                         &:hover {
-                            color: #FFF;
                             background: #0767b3;
+                            color: #FFF;
+                            text-decoration: none;
+                        }
+                        @media (max-width: 768px) {
+                            display: block;
+                            margin: 0;
                         }
                     }
                 }

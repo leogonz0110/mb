@@ -1,5 +1,6 @@
 .footer {
     background: #242b33;
+    @include font-size(1.4);
     .sitemap {
         padding: 30px 0;
     }

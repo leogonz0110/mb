@@ -80,7 +80,7 @@ if($img_ratio == 'portrait') {
 			        if ( $thumbnail_id ) {
 			            $image_cat_url = wp_get_attachment_image_src( $thumbnail_id, 'full');
 			            $image_cat_url = $image_cat_url[0];
-			            $cat_image = aq_resize($image_cat_url, $catimgwidth, $catimgheight, true);
+			            $cat_image = $image_cat_url;
 			            if(empty($cat_image)) {$cat_image = $image_cat_url;}
 			        } else {
 			            $cat_image = virtue_img_placeholder();
@@ -109,6 +109,6 @@ if($img_ratio == 'portrait') {
 	 */
 	do_action( 'woocommerce_after_subcategory', $category ); ?>
 
-
+asdasda
 	</div>
 </div>

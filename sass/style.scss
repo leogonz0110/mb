@@ -54,7 +54,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-//@import "typography/typography";
+@import "typography/typography";
 
 /*--------------------------------------------------------------
 # Elements
@@ -89,7 +89,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "nav/global";
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "page/page";
 
 /*--------------------------------------------------------------
 # Accessibility

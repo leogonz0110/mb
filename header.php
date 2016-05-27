@@ -32,21 +32,17 @@
 						   <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> admin@mb.com</a>
 					   </div>
 					   <div class="col-sm-4 search">
-						   <form action="#" method="post">
-							   <div class="input-group">
-								   <input type="text" class="form-control" placeholder="Search for...">
-								   <span class="input-group-btn">
-									   <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-								   </span>
-							   </div>
-						   </form>
+						   <?php get_search_form(true); ?>
 					   </div>
 					   <div class="col-sm-3 myspace">
 						   <div class="row">
+						   <?php
+								global $woocommerce;
+							?>
 							   <ul class="clearfix">
 								   <li><a href="#" class="user-btn"><i class="fa fa-user" aria-hidden="true"></i></a></li>
 								   <li><a href="#" class="wish-btn"><i class="fa fa-heart" aria-hidden="true"><span class="detail">0</span></i></a></li>
-								   <li><a href="#" class="cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"><span class="detail">0</span></i></a></li>
+								   <li><a href="#" class="cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"><span class="detail"> <?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'));?></span></i></a></li>
 							   </ul>
 						   </div>
 					   </div>
@@ -59,7 +55,6 @@
 					   <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
 					   <a href="#" class="mobile-btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
 					   <nav id="site-navigation" class="main-navigation" role="navigation">
- 			  			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mb' ); ?></button>
 	 			  			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 	 			  		</nav><!-- #site-navigation -->
 				   </div>

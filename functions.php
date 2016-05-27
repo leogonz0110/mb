@@ -15,6 +15,7 @@ if ( ! function_exists( 'mb_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
 function mb_setup() {
 	/*
 	 * Make theme available for translation.
@@ -118,15 +119,25 @@ function mb_scripts() {
 	wp_enqueue_style( 'fa-style', get_template_directory_uri()."/css/font-awesome.min.css" );
 	wp_enqueue_style( 'mb-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'font-style', "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" );
 	wp_enqueue_script( 'mb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'mb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'bs-js', get_template_directory_uri() . '/js/bootstrap.min.js');
+	wp_enqueue_script( 'jq-js', get_template_directory_uri() . '/js/jquery-1.12.3.min.js');
+	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/js/app.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mb_scripts' );
+
+
+function wc_empty_cart_redirect_url() {
+	return wp_get_referer();
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'wc_empty_cart_redirect_url' );
 
 /**
  * Implement the Custom Header feature.
@@ -152,3 +163,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_loop_add_to_cart', 30 );

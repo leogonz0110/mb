@@ -8,23 +8,17 @@
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
-
+get_header();
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  ?>
-		<div id="content" class="container">
-   		<div class="row">
-      <div class="main <?php echo kadence_main_class(); ?>" role="main">
       <?php do_action( 'woocommerce_before_main_content' ); ?>
 
       	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-			
-			<div class="page-header">
 
-				<?php woocommerce_catalog_ordering(); ?>
-				<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-				<?php woocommerce_result_count(); ?>
-				</div>
-		
+			<div class="page-header">
+				<h1 class="title01"><?php woocommerce_page_title(); ?></h1>
+			</div>
+
 		<?php endif; ?>
 
 		<div class="clearfix">
@@ -43,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			?>
 
 			<div class="clearfix rowtight product_category_padding"> <?php woocommerce_product_subcategories(); ?> </div>
-	  		
+
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -69,4 +63,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<?php endif; ?>
 		<?php do_action( 'woocommerce_after_main_content' ); ?>
-	</div>
+
+	<?php
+	get_footer();
